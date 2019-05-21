@@ -1,0 +1,15 @@
+.location {
+  font-size: 14px;
+  color: #000000;
+  overflow: hidden;
+  ul {
+    overflow: hidden;
+  }
+  li {
+    float: left;
+    margin-right: 9px;
+  }
+  .location-img {
+    margin-right: 20px;
+  }
+}
