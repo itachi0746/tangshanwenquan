@@ -52,7 +52,8 @@
   <div class="mid-logo">
     <!--<div class="img-box">汤山</div>-->
     <div class="img-box">
-      <img src="../images/img02/logo02.png" alt="">
+      汤山
+      <!--<img src="../images/img02/logo02.png" alt="">-->
       <div class="sea">
         <div class="bubble bubble1"></div>
         <div class="bubble bubble2"></div>
@@ -76,9 +77,9 @@
     <div class="line">而那残存的石阶，则使人回想到历代皇帝来浴时的豪华壮丽画卷。</div>
   </div>
 </div>
-<div class="img1">
+<div class="img1" id="img1">
   <img src="./images/img02/tsjy_image_02.png" alt="">
-  <img class="logo-img logo-img1" src="./images/img02/img1logo.png" alt="">
+  <img id="logo-img1" class="logo-img logo-img1" src="./images/img02/img1logo.png" alt="">
 </div>
 <div class="img1 ">
   <img src="./images/img02/tsjy_image_03.png" alt="">
@@ -89,11 +90,16 @@
   <img class="logo-img logo-img1" src="./images/img02/img3logo.png" alt="">
 </div>
 
-@@include('../include/footer.html')
+@@include('../include/footer2.html')
 
 <script src="js/jquery.min.js"></script>
 <script src="js/bs/bootstrap.min.js"></script>
 <script src="./js/utils/rem.js"></script>
-
+<script>
+  var img1 = $('#img1');
+  img1.on('click', function () {
+    window.location.href = '03-人文历史-汤山名人.html'
+  })
+</script>
 </body>
 </html>

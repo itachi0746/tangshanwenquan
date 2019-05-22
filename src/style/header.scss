@@ -155,7 +155,9 @@ input::-ms-clear {
   background: #fff;
   color: #000;
 }
-
+.sea {
+  pointer-events: none;
+}
 /*index*/
 /*汽泡*/
 .top-nav .sea {

@@ -106,7 +106,7 @@ gulp.task('move', function () {
 
 // 监听文件变改
 gulp.task('watch', [], function(cb) {
-  gulp.watch([config.scss + "/scss/*.scss", config.scss + "/style/*.scss", config.src + '/html/**.html'], ['htmlInclude', 'scss']);
+  gulp.watch([config.scss + "/scss/*.scss", config.scss + "/style/*.scss", config.src + '/html/**.html', config.src + '/include/**.html'], ['htmlInclude', 'scss']);
 
 });
 

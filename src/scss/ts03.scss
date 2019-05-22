@@ -1,8 +1,9 @@
+@import "../style/mixin";
 @import "../style/header";
-@import "../style/footer";
+//@import "../style/footer";
+@import "../style/footer2";
 @import "../style/location";
 @import "../style/utils";
-@import "../style/mixin";
 .carousel-item {
   img {
     width: 100%;
@@ -10,7 +11,12 @@
   }
 }
 .main-box {
-  background-color: #fff;
+  //background-color: #fff;
+}
+.the-p {
+  padding: 0 80px;
+  position: relative;
+  z-index: 20;
 }
 .top-font {
   margin-top: 65px;
@@ -19,6 +25,8 @@
   overflow: hidden;
   position: relative;
   text-align: center;
+  background-color: #fff;
+  padding-top: 54px;
 }
 .nav-box {
   display: inline-block;
@@ -35,7 +43,7 @@
     color: #000;
   }
   .name.active {
-    //color: #9aa293;
+    color: #9aa293;
   }
   .name:hover {
     color: #9aa293!important;
@@ -51,20 +59,28 @@
 }
 .title-box {
   text-align: center;
-  margin: 80px 0 50px 0;
+  padding: 80px 0 0px 0;
+  background-color: #fff;
 }
 .title-img {
   width: 425px;
   height: 102px;
   display: inline-block;
-  background-color: #000000;
+  //background-color: #000000;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .main-item-box {
   width: 100%;
-  height: 800px;
+  height: 858px;
   padding-bottom: 30px;
+  padding-top: 58px;
   background-color: #fff;
   margin-bottom: 53px;
+  position: relative;
+
 }
 .main-item-img {
   height: 400px;
@@ -82,8 +98,12 @@
     //width: 165px;
     width: 16%;
     height: 315px;
-    background-color: #000000;
+    //background-color: #000000;
     padding-right: 18px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .main-item-fonts-box {
     width: 84%;
@@ -92,7 +112,7 @@
     p {
       text-indent: 2em;
     }
-    p:nth-last-child(1) {
+    .last-p {
       text-align: right;
       margin-top: 34px;
     }
@@ -132,4 +152,54 @@
   //scrollbar-darkshadow-color: #666; /**//*立体滚动条强阴影的颜色*/
   //scrollbar-track-color: #666; /**//*立体滚动条背景颜色*/
   //scrollbar-base-color:#f8f8f8; /**//*滚动条的基本颜色*/
+}
+.bg-LR {
+  position: absolute;
+  z-index: -1;
+  top: 105px;
+  height: 593px;
+  width: 336px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.bg-left {
+  left: -168px;
+}
+.bg-right {
+  right: -168px;
+}
+.nav-right {
+  position: fixed;
+  right: 76px;
+  top: 200px;
+  z-index: 999;
+  color: #fff;
+  font-family: FZLBJW;
+}
+.nav-right-title {
+  margin-bottom: 12px;
+  width: 134px;
+  height: 112px;
+  position: relative;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 0;
+  img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+  }
+  .title-font-box {
+    position: relative;
+    z-index: 10;
+  }
+  .title-font-box p {
+    line-height: 1;
+  }
 }

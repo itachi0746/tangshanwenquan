@@ -133,6 +133,9 @@ input::-ms-clear {
   background: #fff;
   color: #000; }
 
+.sea {
+  pointer-events: none; }
+
 /*index*/
 /*汽泡*/
 .top-nav .sea {
@@ -526,6 +529,12 @@ input::-ms-clear {
 .map-content {
   margin: 1.2rem 0; }
 
+@font-face {
+  font-family: FZLBJW;
+  font-style: normal;
+  font-weight: normal;
+  src: url("../font/fzlbjt.ttf") format("truetype"); }
+
 .carousel-item img {
   width: 100%;
   height: 12.54rem; }
@@ -547,8 +556,14 @@ input::-ms-clear {
     .mid .mid-logo .img-box {
       width: 1.8rem;
       height: 1.8rem;
+      line-height: 1.8rem;
+      border-radius: 50%;
+      background-color: #9aa293;
       position: relative;
-      display: inline-block; }
+      font-size: 0.7rem;
+      color: #fff;
+      display: inline-block;
+      font-family: FZLBJW; }
     .mid .mid-logo .sea {
       display: none; }
     .mid .mid-logo .img-box:hover .sea {
@@ -579,7 +594,9 @@ input::-ms-clear {
   margin-bottom: 0.3rem;
   position: relative;
   width: 100%;
-  height: 11rem; }
+  height: 11rem;
+  cursor: pointer;
+  overflow: hidden; }
   .img1 img:nth-child(1) {
     position: absolute;
     top: 0;
