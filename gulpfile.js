@@ -47,10 +47,11 @@ var gulp = require('gulp'),
       .pipe(gulp.dest(config.src));
   });
 
+var reload = browserSync.reload;
 // 同步更新浏览器
 gulp.task('browser', function () {
   browserSync.init({
-    files: ['**'],  // 修改HTML也刷新
+    // files: ['**'],  // 修改HTML也刷新
     server: {
       baseDir: config.server,  // 设置服务器的根目录
       index: config.target // 指定默认打开的文件
@@ -106,8 +107,10 @@ gulp.task('move', function () {
 
 // 监听文件变改
 gulp.task('watch', [], function(cb) {
-  gulp.watch([config.scss + "/scss/*.scss", config.scss + "/style/*.scss", config.src + '/html/**.html'], ['htmlInclude', 'scss']);
-
+  gulp.watch([config.scss + "/scss/*.scss", config.scss + "/style/*.scss"], ['scss']);
+  gulp.watch([config.src + '/html/**.html', config.src + '/include/**.html'], ['htmlInclude']);
+  gulp.watch(config.src + '/css/*.css').on('change',reload);
+  gulp.watch(config.src + '/*.html').on('change',reload);
 });
 
 // 默认任务, 编译scss,浏览器同步,监听scss

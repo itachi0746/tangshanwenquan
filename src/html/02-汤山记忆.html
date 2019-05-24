@@ -81,11 +81,11 @@
   <img src="./images/img02/tsjy_image_02.png" alt="">
   <img id="logo-img1" class="logo-img logo-img1" src="./images/img02/img1logo.png" alt="">
 </div>
-<div class="img1 ">
+<div class="img1" id="img2">
   <img src="./images/img02/tsjy_image_03.png" alt="">
   <img class="logo-img logo-img2" src="./images/img02/img2logo.png" alt="">
 </div>
-<div class="img1">
+<div class="img1" id="img3">
   <img src="./images/img02/tsjy_image_04.png" alt="">
   <img class="logo-img logo-img1" src="./images/img02/img3logo.png" alt="">
 </div>
@@ -97,8 +97,16 @@
 <script src="./js/utils/rem.js"></script>
 <script>
   var img1 = $('#img1');
+  var img2 = $('#img2');
+  var img3 = $('#img3');
   img1.on('click', function () {
     window.location.href = '03-人文历史-汤山名人.html'
+  })
+  img2.on('click', function () {
+    window.location.href = '05-人文历史-千年圣汤.html'
+  })
+  img3.on('click', function () {
+    window.location.href = '06-人文历史-千年古镇.html'
   })
 </script>
 </body>
