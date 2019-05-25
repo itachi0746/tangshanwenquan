@@ -17,7 +17,9 @@ input {
 input::-ms-clear {
   display: none
 }
-
+html,body {
+  overflow-x: hidden;
+}
 .clearfix:after {
   content: ".";
   display: block;
@@ -502,7 +504,7 @@ input::-ms-clear {
 
 
 //移动端
-.mobile-nav {
+.mobile-header {
   height: 237px;
   width: 100%;
   display: none;
@@ -511,6 +513,8 @@ input::-ms-clear {
   top: 0;
   left: 0;
   z-index: 99;
+  text-align: center;
+  line-height: 237px;
 }
 .btn-box {
   width: 62px;
@@ -520,11 +524,123 @@ input::-ms-clear {
     height: 100%;
   }
 }
+.mobile-logo {
+  width: 420px;
+  @include center;
+}
+.mobile-search {
+  width: 80px;
+  float: right;
+  height: 237px;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+  }
+
+}
+.mobile-btn {
+  width: 80px;
+  float: left;
+  height: 237px;
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  img {
+    width: 100%;
+  }
+}
+.mobile-nav {
+  //height: 100%;
+  width: 750px;
+  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.8);
+  position: fixed;
+  left: -750px;
+  top: 0;
+  z-index: 999;
+}
+.mobile-nav-top {
+  height: 470px;
+  width: 100%;
+  @include defaultFlex;
+  img {
+    width: 236px;
+  }
+}
+.mobile-mask {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  display: none;
+}
+.card-link-icon1 {
+  width: 80px;
+  height: 80px;
+}
+.card-link-icon2 {
+  width: 30px;
+  height: 55px;
+  float: right;
+  //margin-left: 60px;
+}
+.card-link-span {
+  color: #000;
+  margin-left: 65px;
+  flex: 1;
+}
+.card-body-ul li a {
+  padding: 0 174px 0 200px;
+  height: 200px;
+  border-bottom: 1px solid #ddd;
+  color: #000;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  //justify-content: space-between;
+  img {
+    width: 43px;
+    height: 65px;
+  }
+  span {
+    margin-left: 40px;
+  }
+}
+.card-body-ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+
 @media screen and (max-width: 576px) {
   .top-nav {
     display: none;
   }
-  .mobile-nav {
+  .mobile-header {
     display: block;
+  }
+  .card-header {
+    padding: 0;
+  }
+  .card-link {
+    height: 200px;
+    width: 100%;
+    //display: inline-block;
+    padding: 0 120px;
+    display: flex;
+    align-items: center;
+    //justify-content: space-between;
+    font-size: 22px;
+
+  }
+  .card {
+    background-color: rgba(255,255,255,0.8);
+  }
+  .card-body {
+    padding: 0;
+  }
+  .card-header:first-child {
+    border-radius: 0;
   }
 }

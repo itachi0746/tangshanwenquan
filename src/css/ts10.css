@@ -21,6 +21,9 @@ input {
 input::-ms-clear {
   display: none; }
 
+html, body {
+  overflow-x: hidden; }
+
 .clearfix:after {
   content: ".";
   display: block;
@@ -407,7 +410,7 @@ input::-ms-clear {
   margin-top: -0.27rem;
   background-size: 100% 100%; }
 
-.mobile-nav {
+.mobile-header {
   height: 4.74rem;
   width: 100%;
   display: none;
@@ -415,7 +418,9 @@ input::-ms-clear {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99; }
+  z-index: 99;
+  text-align: center;
+  line-height: 4.74rem; }
 
 .btn-box {
   width: 1.24rem;
@@ -424,11 +429,162 @@ input::-ms-clear {
     width: 100%;
     height: 100%; }
 
+.mobile-logo {
+  width: 8.4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
+.mobile-search {
+  width: 1.6rem;
+  float: right;
+  height: 4.74rem;
+  margin-right: 2rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobile-search img {
+    width: 100%; }
+
+.mobile-btn {
+  width: 1.6rem;
+  float: left;
+  height: 4.74rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 2rem; }
+  .mobile-btn img {
+    width: 100%; }
+
+.mobile-nav {
+  width: 15rem;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: fixed;
+  left: -15rem;
+  top: 0;
+  z-index: 999; }
+
+.mobile-nav-top {
+  height: 9.4rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .mobile-nav-top img {
+    width: 4.72rem; }
+
+.mobile-mask {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 998;
+  display: none; }
+
+.card-link-icon1 {
+  width: 1.6rem;
+  height: 1.6rem; }
+
+.card-link-icon2 {
+  width: 0.6rem;
+  height: 1.1rem;
+  float: right; }
+
+.card-link-span {
+  color: #000;
+  margin-left: 1.3rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+     -moz-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.card-body-ul li a {
+  padding: 0 3.48rem 0 4rem;
+  height: 4rem;
+  border-bottom: 0.02rem solid #ddd;
+  color: #000;
+  font-size: 0.44rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .card-body-ul li a img {
+    width: 0.86rem;
+    height: 1.3rem; }
+  .card-body-ul li a span {
+    margin-left: 0.8rem; }
+
+.card-body-ul li:nth-last-child(1) {
+  border-bottom: none; }
+
 @media screen and (max-width: 576px) {
   .top-nav {
     display: none; }
-  .mobile-nav {
-    display: block; } }
+  .mobile-header {
+    display: block; }
+  .card-header {
+    padding: 0; }
+  .card-link {
+    height: 4rem;
+    width: 100%;
+    padding: 0 2.4rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.44rem; }
+  .card {
+    background-color: rgba(255, 255, 255, 0.8); }
+  .card-body {
+    padding: 0; }
+  .card-header:first-child {
+    border-radius: 0; } }
 
 .footer {
   padding-top: 0.58rem;
@@ -595,6 +751,12 @@ input::-ms-clear {
   width: 33.4rem;
   margin: 0 auto; }
 
+.dn {
+  display: none; }
+
+.vh {
+  visibility: hidden; }
+
 textarea {
   resize: none;
   border: none; }
@@ -745,6 +907,10 @@ input, button, select, textarea {
 
 .bg-right {
   right: -3.36rem; }
+
+@media screen and (max-width: 576px) {
+  .nav-right {
+    display: none; } }
 
 .carousel-item img {
   width: 100%;

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>千年古镇之寺庙</title>
   <link href="css/bs/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -68,15 +68,157 @@
 </div>
 <!--nav-->
 
-<!--移动端导航-->
-<div class="mobile-nav">
-  <div class="btn-box">
+<!--移动端头部-->
+<div class="mobile-header">
+  <div class="mobile-btn" id="mobile-btn">
     <img src="./images/mobile/list.png" alt="">
   </div>
-  <img src="./images/logo.png"/>
-  <div class="search fr"></div>
-
+  <img class="mobile-logo" src="./images/logo.png"/>
+  <div class="mobile-search">
+    <img src="./images/search_bg.png" alt="">
+  </div>
 </div>
+<!--移动端导航-->
+<div class="mobile-nav" id="mobile-nav">
+  <div class="mobile-nav-top">
+    <img src="./images/mobile/nav-logo.png" alt="">
+  </div>
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          <img class="card-link-icon1" src="./images/mobile/home.png" alt="">
+          <span class="card-link-span">汤山首页</span>
+          <img class="card-link-icon2" src="./images/mobile/arrow.png" alt="">
+        </a>
+      </div>
+      <!--<div id="collapseOne" class="collapse show" data-parent="#accordion">-->
+        <!--<div class="card-body">-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+          <img class="card-link-icon1" src="./images/mobile/book.png" alt="">
+          <span class="card-link-span">汤山印象</span>
+          <img class="card-link-icon2" src="./images/mobile/arrow.png" alt="">
+        </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="card-body-ul">
+            <li>
+              <a href="02-汤山记忆.html">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>汤山记忆</span>
+              </a>
+            </li>
+            <li>
+              <a href="10-宜居宜业.html">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>宜居宜业</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>汤山事记</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+          <img class="card-link-icon1" src="./images/mobile/coffee.png" alt="">
+          <span class="card-link-span">汤山Life</span>
+          <img class="card-link-icon2" src="./images/mobile/arrow.png" alt="">
+        </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="card-body-ul">
+            <li>
+              <a href="./17-汤山Life-吃美食.html">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>吃~美食</span>
+              </a>
+            </li>
+            <li>
+              <a href="./20-汤山Life-住旅憩.html">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>住~旅憩</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>行~遇见</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>游~诗旅</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>购~值得</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>娱~悠闲</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseFour">
+          <img class="card-link-icon1" src="./images/mobile/camera.png" alt="">
+          <span class="card-link-span">四季汤山</span>
+          <img class="card-link-icon2" src="./images/mobile/arrow.png" alt="">
+        </a>
+      </div>
+      <div id="collapseFour" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <ul class="card-body-ul">
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>新闻动态</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>最新活动</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <img src="./images/mobile/card-icon3.png" alt="">
+                <span>全域旅游</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--遮罩-->
+<div class="mobile-mask" id="mobile-mask"></div>
+
 
 <!-- 轮播图片 -->
 <div id="ts03-0" class="carousel slide" data-ride="carousel">
@@ -638,6 +780,8 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/bs/bootstrap.min.js"></script>
 <script src="./js/utils/rem.js"></script>
-<script src="./js/ts03.js"></script>
+<script src="./js/utils/right-nav.js"></script>
+<script src="./js/utils/mobile-nav.js"></script>
+
 </body>
 </html>

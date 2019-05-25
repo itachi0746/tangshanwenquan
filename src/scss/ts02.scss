@@ -105,6 +105,68 @@
     width: 134px;
     height: 406px;
     cursor: pointer;
+    background-color: rgba(255,255,255,0.8);
+    padding: 20px 30px;
+    color: #333333;
+    font-family: FZLBJW;
+  }
+  .logo-top {
+    position: relative;
+  }
+  .logo-top1 {
+    height: 248px;
+  }
+  .logo-top2 {
+    height: 200px;
+  }
+  .logo-font {
+    height: 248px;
+    width: 45px;
+    font-size: 35px;
+    position: absolute;
+    right: -10px;
+    top: 0;
+    line-height: 1.2;
+  }
+  .logo-eng {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: 10% 0;
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    white-space: nowrap;
+    border-top: 1px solid #333333;
+  }
+  .logo-btm {
+    margin-top: 10px;
+    font-size: 25px;
+    display: flex;
+    color: #333333;
+    justify-content: space-between;
+  }
+  .logo-btm1 {
+    height: 110px;
+  }
+  .logo-btm2 {
+    height: 55px;
+  }
+  .logo-btm a {
+    color: #333333;
+  }
+  .logo-btm {
+    display: flex;
+  }
+  .logo-btm-1 {
+    line-height: 1;
+    text-align: center;
+  }
+  .logo-btm-1:hover {
+    color: #9aa293;
   }
 }
 .logo-img1 {

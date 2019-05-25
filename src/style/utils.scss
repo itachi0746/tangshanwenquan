@@ -10,6 +10,12 @@
   width: 1670px;
   margin: 0 auto;
 }
+.dn {
+  display: none;
+}
+.vh {
+  visibility: hidden;
+}
 textarea {
   resize:none;
   border: none;
@@ -166,4 +172,12 @@ input,button,select,textarea{outline:none}
 }
 .bg-right {
   right: -168px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .nav-right {
+    display: none;
+  }
 }
