@@ -1,6 +1,7 @@
 @import "../style/mixin";
 @import "../style/header";
 @import "../style/footer2";
+@import "../style/utils";
 
 
 //@font-face {
@@ -176,4 +177,26 @@
 .logo-img2 {
   top: 92px;
   left: 430px;
+}
+
+@media screen and (max-width: 576px)  {
+  .img1 {
+    height: 650px;
+
+    .logo-img {
+      width: 260px;
+      height: 506px;
+    }
+    .logo-btm {
+      justify-content: flex-end;
+    }
+  }
+  .img1 .logo-btm a {
+    width: 60px;
+  }
+  .img1 .logo-btm2 {
+    margin-top: 40px;
+    height: 100px;
+  }
+
 }

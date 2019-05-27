@@ -19,6 +19,7 @@ input::-ms-clear {
 }
 html,body {
   overflow-x: hidden;
+  height: auto;
 }
 .clearfix:after {
   content: ".";
@@ -538,7 +539,6 @@ html,body {
   img {
     width: 100%;
   }
-
 }
 .mobile-btn {
   width: 80px;
@@ -574,7 +574,7 @@ html,body {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 998;
+  z-index: 997;
   display: none;
 }
 .card-link-icon1 {
@@ -613,6 +613,8 @@ html,body {
   border-bottom: none;
 }
 
+
+
 @media screen and (max-width: 576px) {
   .top-nav {
     display: none;
@@ -644,3 +646,5 @@ html,body {
     border-radius: 0;
   }
 }
+
+

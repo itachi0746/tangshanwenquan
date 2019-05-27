@@ -39,10 +39,11 @@ var gulp = require('gulp'),
 
   // 合并html文件
   gulp.task('htmlInclude', function() {
-    gulp.src(config.src + '/html/**.html')
+    gulp.src([config.src + '/html/**.html']) // 主文件
       .pipe(fileinclude({
         prefix: '@@',
-        basepath: '@file'
+        basepath: '@file',
+        // basepath: './src/include',
       }))
       .pipe(gulp.dest(config.src));
   });

@@ -305,4 +305,40 @@
   .imgs-box {
     width: 100% !important;
   }
+  .font-item1-l, .font-item3-l {
+    height: 180px;
+  }
+  .font-item1-r-2 {
+    line-height: 1;
+  }
+  .font-item-title {
+    font-size: 100px;
+  }
+  .font-item-num {
+    width: 250px;
+    height: 100px;
+  }
+  .font-item-num span {
+    font-size: 80px;
+  }
+  .font-item4 {
+    width: 350px;
+
+  }
+  .font-item4-b, .font-item2-b {
+    display: flex;
+    justify-content: center;
+  }
+  .font-item3-r, .font-item5-r {
+    width: 47%;
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+  .font-item2 {
+    right: 100px;
+    width: 300px;
+  }
+  .font-item2-b-1 {
+    width: 70px;
+  }
 }
