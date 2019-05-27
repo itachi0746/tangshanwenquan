@@ -28,11 +28,12 @@ input,button,select,textarea{outline:none}
 
 .nav-right {
   position: absolute;
-  right: -162px;
-  top: 100px;
+  right: 100px;
+  top: 300px;
   z-index: 999;
   color: #fff;
   font-family: FZLBJW;
+  display: none;
 }
 .nav-right-title {
   margin-bottom: 10px;

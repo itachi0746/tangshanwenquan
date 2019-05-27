@@ -23,6 +23,7 @@ input::-ms-clear {
 
 html, body {
   overflow-x: hidden;
+  overflow-y: auto;
   height: auto; }
 
 .clearfix:after {
@@ -773,11 +774,12 @@ input, button, select, textarea {
 
 .nav-right {
   position: absolute;
-  right: -3.24rem;
-  top: 2rem;
+  right: 2rem;
+  top: 6rem;
   z-index: 999;
   color: #fff;
-  font-family: FZLBJW; }
+  font-family: FZLBJW;
+  display: none; }
 
 .nav-right-title {
   margin-bottom: 0.2rem;
@@ -1006,9 +1008,11 @@ input, button, select, textarea {
   .mobile-right-nav-btn {
     display: block; } }
 
-.carousel-item img {
-  width: 100%;
+.carousel-item {
   height: 12.54rem; }
+  .carousel-item img {
+    width: 100%;
+    height: 100%; }
 
 .top-font {
   margin-top: 1.3rem; }

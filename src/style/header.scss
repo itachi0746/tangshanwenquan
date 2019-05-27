@@ -19,6 +19,7 @@ input::-ms-clear {
 }
 html,body {
   overflow-x: hidden;
+  overflow-y: auto;
   height: auto;
 }
 .clearfix:after {
