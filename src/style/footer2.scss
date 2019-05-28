@@ -84,20 +84,35 @@
   text-align: center;
 }
 .big-code-box {
-  width: 142px;
-  height: 125px;
+  width: 160px;
+  height: 140px;
+  //width: 135px;
+  //height: 120px;
   position: absolute;
   right: -100px;
-  top: -10px;
+  top: -40px;
 }
 .big-code-img {
   width: 100%;
   height: 100%;
-  text-align: right;
-  img {
-    width: 100px;
-    height: 100px;
+  @include defaultFlex;
+  //text-align: right;
+  img:nth-child(2) {
+    width: 95px;
+    height: 95px;
+    position: relative;
+    margin-left: 10px;
   }
+  .kuang {
+    width: 100%;
+    height: 100%;
+  }
+}
+.kuang {
+  position: absolute;
+  top: 0;
+  left: 0;
+  //z-index: -1;
 }
 .big-code-box {
   display: none;
