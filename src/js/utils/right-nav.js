@@ -63,7 +63,6 @@ $(function () {
   }
 
   $(window).scroll(function(){
-    changeRightNav()
     var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop; // 滚动高度
     var mainHeaderH = $('#main-header').height(), // 中间头部高度
       carouselH = $('#ts03-0').height(), // 轮播高度

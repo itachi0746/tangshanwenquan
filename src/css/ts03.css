@@ -342,8 +342,7 @@ html, body {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0 0 0.16rem 0.16rem;
   -webkit-box-shadow: 0 0.02rem 0.1rem rgba(0, 0, 0, 0.47);
-          box-shadow: 0 0.02rem 0.1rem rgba(0, 0, 0, 0.47);
-  height: 100%; }
+          box-shadow: 0 0.02rem 0.1rem rgba(0, 0, 0, 0.47); }
 
 .top-nav .topnav li:hover > ul {
   left: auto; }
