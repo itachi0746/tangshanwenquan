@@ -27,6 +27,10 @@ $(function () {
 
   var bodyEl = document.body;
   var theTop = 0;
+  /**
+   * 禁止body滚动
+   * @param isFixed
+   */
   function stopBodyScroll (isFixed) {
     if (isFixed) {
       theTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop; // 滚动高度
@@ -39,6 +43,55 @@ $(function () {
       window.scrollTo(0, theTop) // 回到原先的top
     }
   }
+  /**
+   * 监听手势
+   */
+  function listenSwipe() {
+    // var hammerBody = new Hammer($('body')[0]);
+    var hammerCarousel = new Hammer($('#ts03-0')[0]);
+    // hammerBody.get('swipe').set({
+    //   direction: Hammer.DIRECTION_HORIZONTAL // 水平方向
+    // });
+    hammerCarousel.get('swipe').set({
+      direction: Hammer.DIRECTION_HORIZONTAL // 水平方向
+    });
+    // hammerBody.on('swiperight', function(ev) { // 关闭右侧导航
+    //   // console.log(ev.type);
+    //   if (showRightNav) {
+    //     stopBodyScroll(false)
+    //     showRightNav = false;
+    //     mobileRightNav.css('right', '-' + rightNavWidth + 'px');
+    //     mobileMask.css('display', 'none')
+    //   }
+    // });
+    hammerCarousel.on('swiperight', function(ev) { // 轮播右滑
+      // console.log(ev.type);
+      $('.carousel-control-prev').click();
+    });
+    hammerCarousel.on('swipeleft', function(ev) { // 轮播左滑
+      // console.log(ev.type);
+      $('.carousel-control-next').click();
+    });
+  }
+  /**
+   * 判断是否手机
+   * @returns {boolean|Array|{index: number, input: string}}
+   */
+  function isMobile() {
+    var ua = navigator.userAgent;
+    var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+      isIphone =!ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+      isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+      _isMobile = isIphone || isAndroid;
+
+    return _isMobile
+  }
+  //判断
+  if(isMobile()){
+    listenSwipe()
+  }else{
+  }
+
 
   mobileBtn.on('click', function () { // 点击按钮出现导航
     mobileNav.css('left', '0px');
@@ -48,10 +101,10 @@ $(function () {
     if (showRightNav) {
       stopBodyScroll(false)
       showRightNav = false;
+      mobileRightNav.css('right', '-' + rightNavWidth + 'px');
     }
 
     mobileNav.css('left', '-' + navWidth + 'px');
-    mobileRightNav.css('right', '-' + rightNavWidth + 'px');
     mobileMask.css('display', 'none')
   });
 
@@ -62,10 +115,10 @@ $(function () {
     mobileMask.css('display', 'block')
 
   });
-  // mobileMask.on('touchstart', function () { // 点击蒙层导航消失
-  //   mobileRightNav.css('right', '-' + rightNavWidth);
-  //   mobileMask.css('display', 'none')
-  // });
+
+  /**
+   * 右侧导航的点击
+   */
   function mobileLiBindClick() {
     var liArr = $('#mobile-right-nav .orange');
     for (let i = 0; i < liArr.length; i++) {

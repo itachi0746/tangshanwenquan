@@ -545,14 +545,15 @@ html,body {
   }
 }
 .mobile-btn {
-  width: 80px;
+  width: 300px;
   float: left;
   height: 237px;
   display: flex;
   align-items: center;
-  margin-left: 100px;
+  justify-content: center;
+  //margin-left: 100px;
   img {
-    width: 100%;
+    width: 80px;
   }
 }
 .mobile-nav {

@@ -129,10 +129,22 @@ $Pcolor: #c3c1c1;
 //  }
 //}
 
+//@font-face {
+//  font-family: FZLBJW;
+//  font-style: normal;
+//  font-weight: normal;
+//  src: url('../font/fzlbjt.ttf') format('truetype');
+//  //src: url;
+//}
+
 @font-face {
   font-family: FZLBJW;
-  font-style: normal;
+  src: url('../font/fzlbjt-webfont.eot');
+  src: url('../font/fzlbjt-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../font/fzlbjt-webfont.woff2') format('woff2'),
+  url('../font/fzlbjt-webfont.woff') format('woff'),
+  url('../font/fzlbjt-webfont.ttf') format('truetype'),
+  url('../font/fzlbjt-webfont.svg#fzlibian-s02sregular') format('svg');
   font-weight: normal;
-  src: url('../font/fzlbjt.ttf') format('truetype');
-  //src: url;
+  font-style: normal;
 }

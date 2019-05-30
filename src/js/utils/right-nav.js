@@ -1,7 +1,7 @@
 $(function () {
 
   /**
-   * 改变右侧导航的定位
+   * 按照滚动高度,改变右侧导航的定位
    * 绝对定位时的高度 = 滚动上去的高度 + fix定位的高度
    */
   function changeRightNav() {
@@ -24,6 +24,7 @@ $(function () {
     navRight.show()
   }
   var t_img; // 定时器
+  var isInMobile; // 是否在手机运行
   /**
    * 检测html的fontsize是否已设置, 如果已设置则进行下一步 ,否则递归
    * @param cb 回调函数
@@ -55,14 +56,19 @@ $(function () {
 
     return _isMobile
   }
+  isInMobile = isMobile()
   //判断
-  if(isMobile()){
-
+  if(isInMobile){
   }else{
     hasSetRem(changeRightNav)
   }
 
-  $(window).scroll(function(){
+  // 监听滚动 控制右侧导航栏
+  $(window).scroll(function() {
+    if (!isInMobile) {
+      changeRightNav() // 按照滚动改变定位
+    }
+
     var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop; // 滚动高度
     var mainHeaderH = $('#main-header').height(), // 中间头部高度
       carouselH = $('#ts03-0').height(), // 轮播高度
@@ -91,11 +97,8 @@ $(function () {
     }
     var result = heightDiff / mainItemH; // 高度差除于每个item的高度
     var theIndex = Math.floor(result);
-    $(liOrange[theIndex]).addClass('scroll-mark') // 添加颜色
-
+    $(liOrange[theIndex]).addClass('scroll-mark'); // 添加颜色
   });
-
-  // window.scrollTo(0,1)
 
 });
 
